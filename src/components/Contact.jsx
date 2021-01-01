@@ -1,8 +1,79 @@
 import React from 'react'
+import {useForm} from 'react-hook-form'
+import {ButtonInfo} from './Data'
+import {ContactInfo} from './Data'
 
 const Contact = () => {
+
+  const {register, errors}=useForm({
+    mode: 'onBlur',
+})
+
+// const onSubmit =(e) =>{
+//   e.preventDefault()
+//   reset()
+// }
   return (
     <div id='contact'>
+      <h5>{ContactInfo.tagLine}</h5>
+      <h1>{ContactInfo.headLine}</h1>
+      
+      <div className='hero-section'>
+      
+      <div className='hero-wrapper-image'>
+      <img src={ContactInfo.Img} alt='email'/>
+      </div>
+
+      <div className='hero-wrapper-text'>
+        <p>{ContactInfo.subHeadLine}</p>
+
+        <form name='contact' action='/contact' method='POST' >
+        <input type='hidden' name='form-name' value='contact'/>
+        <input 
+                  type='text' 
+                  name='name'
+                  placeholder ='Name...'
+                  ref={register({ required: true })}
+               />
+               <div>
+              {errors.name && <span style={{color:'red'}}> Please input your name</span>}
+              </div>
+               <br/>
+        <input 
+                   type='email' 
+                   name='email' 
+                   placeholder='Email...' 
+                   ref={register({
+                   required: 'Required',
+                   pattern:{
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: 'Please use a valid email address'
+                            }
+                    })}
+               />
+               <div>
+               {errors.email && <span style={{color:'red'}}>{errors.email.message}</span>}
+               </div>
+               <br/>
+
+      <textarea rows='20' name='message'  ref={register({
+                   required: true
+               })}
+               placeholder='Type your message here...'
+               />
+               <div>
+               {errors.message && <span style={{color:'red'}}>Please add a message</span>}
+               </div>
+               <br/>
+               
+               <button type='submit' className='btn-primary'>
+                {ButtonInfo.contact}
+               </button>
+
+           </form> 
+      </div>
+      </div>
+      
       
     </div>
   )

@@ -1,27 +1,37 @@
 import React from 'react'
-import {ProjectsInfo} from './Data'
+import {ProjectsInfo, ScreenshotsInfo} from './Data'
 
-export const OtherProjects = () => {
+const OtherProjects = () => {
   return (
-    <>
+    <div className='other-projects-main-container'>
       <h5>{ProjectsInfo.tagLineWP}</h5>
       <h1>{ProjectsInfo.headLineWP}</h1>
-      <div clasName='card-grid'>
+      
+      <div className='hero-section'>
         
-        <div className='card-1'>
-        <img src={} alt='screenshot'/>
+        <div className='card'>
+        <a href='https://thegrindcafe.co.ke/' alt='screenshot' target='_blank' rel='noreferrer'>
+          <img src={ScreenshotsInfo.grind} alt='screenshot'/>
+          </a>
         <p>{ProjectsInfo.DescGrind}</p>
-        <a href='' target='_blank' />
+        <a href='https://thegrindcafe.co.ke' target='_blank' rel='noreferrer'>
+          {ProjectsInfo.linkTextWP}
+        </a>
         </div>
         
-        <div className='card-2'>
-        <img src={} alt='screenshot'/>
+        <div className='card'>
+        <a href='https://motionauto.co.ke/' alt='screenshot' target='_blank' rel='noreferrer'>
+          <img src={ScreenshotsInfo.motion} alt='screenshot'/>
+          </a>
         <p>{ProjectsInfo.DescMotion}</p>
-        <a href='' target='_blank' />
+        <a href='https://motionauto.co.ke' target='_blank' rel='noreferrer'>
+          {ProjectsInfo.linkTextWP}
+        </a>
         </div>
         
+    </div>
 
       </div>
-    </>
   )
 }
+export default OtherProjects
