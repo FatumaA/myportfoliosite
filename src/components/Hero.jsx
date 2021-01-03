@@ -10,9 +10,13 @@ const Hero = () => {
       <h5>{HeroInfo.tagLine}</h5>
       <h1>{HeroInfo.headLine}</h1>
       <p>{HeroInfo.subHeadLine}</p>
+
+      <a href='/#projects'> 
       <button  className='btn-primary'>
         {ButtonInfo.hero}
       </button>
+      </a>
+
     </div>
       
 

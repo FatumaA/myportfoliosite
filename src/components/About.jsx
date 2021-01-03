@@ -10,9 +10,13 @@ const About = () => {
       <h5>{AboutInfo.tagLine}</h5>
       <h1>{AboutInfo.headLine}</h1>
       <p>{AboutInfo.subHeadLine}</p>
+
+      <a href='/#contact'> 
       <button className='btn-primary'>
         {ButtonInfo.about}
       </button>
+      </a>
+
       </div>
 
       <div className='hero-wrapper-image'>

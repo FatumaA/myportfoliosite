@@ -19,7 +19,7 @@ const Navbar = () => {
 
             <ul>
             
-                <li> <Link  smooth to="/#home"
+                <li > <Link  smooth to="/#home"
                         className='nav-links' 
                         style={{transform:click ? "translateX(0)": "translateX(500px)"}} 
                         exact> Home </Link></li>    
@@ -35,7 +35,7 @@ const Navbar = () => {
                         className='nav-links' 
                         style={{transform:click ? "translateX(0)": "translateX(500px)"}} 
                         exact> Contact</Link></li>      
-                
+
             </ul>
             
 
