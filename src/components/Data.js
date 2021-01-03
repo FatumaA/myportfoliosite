@@ -31,8 +31,8 @@ export const ContactInfo ={
 export const BannerInfo ={
   html: '/images/html5.png',
   css: '/images/CSS3.png',
-  react: '/images/reactLogo.png',
-  sass: '/images/Sass.jpeg',
+  react: '/images/react.png',
+  sass: '/images/sass.png',
   javascript: '/images/javaScript.png'
   
 }

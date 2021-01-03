@@ -76,7 +76,7 @@ body{
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin-bottom: 20px; 
-  padding-top: 20px;
+  margin-top: 20px;
 }
 .hero-wrapper-image img{
  max-width: 100%;
@@ -214,7 +214,7 @@ textarea{
     }
     
     .hero-section{
-      margin-top: -70px;
+      margin-top: -50px;
       margin-bottom: 20px;
     }
     .about-main-container{
