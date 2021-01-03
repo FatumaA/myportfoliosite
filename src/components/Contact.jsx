@@ -30,18 +30,18 @@ const Contact = () => {
         <form name='contact' action='/contact' method='POST' >
         <input type='hidden' name='form-name' value='contact'/>
         <label htmlFor='Name'>Name:</label>
-        <input required
+        <input 
                   type='text' 
                   name='name'
                   placeholder ='Name...'
-                  ref={register({ required: true })}
+                  // ref={register({ required: true })}
                />
-               <div>
+               {/* <div>
               {errors.name && <span style={{color:'red'}}> Please input your name</span>}
-              </div>
+              </div> */}
                <br/>
         <label htmlFor='Email'>Email:</label>
-        <input required
+        <input 
                    type='email' 
                    name='email' 
                    placeholder='Email...' 
@@ -53,19 +53,20 @@ const Contact = () => {
                             }
                     })}
                />
-               <div>
+               {/* <div>
                {errors.email && <span style={{color:'red'}}>{errors.email.message}</span>}
-               </div>
+               </div> */}
                <br/>
       <label htmlFor='Message'>Message:</label>
-      <textarea required rows='20' name='message'  ref={register({
-                   required: true
-               })}
+      <textarea  rows='20' name='message'  
+      // ref={register({
+      //              required: true
+      //          })}
                placeholder='Type your message here...'
                />
-               <div>
+               {/* <div>
                {errors.message && <span style={{color:'red'}}>Please add a message</span>}
-               </div>
+               </div> */}
                <br/>
                
                <button type='submit' className='btn-primary'>
