@@ -25,7 +25,8 @@ export const AboutInfo ={
 export const ContactInfo ={
   tagLine: 'CONTACT',
   headLine: "Get in Touch",
-  subHeadLine: "Have a project or a job offer you'd like to discuss? Fill in the form and I'll get right back to you. Or send a direct email: fatuma@shecodes.me",
+  subHeadLine: "Have a project or a job offer you'd like to discuss? Fill in the form and I'll get right back to you",
+  //  Or send a direct email: fatuma@shecodes.me",
   Img: '/images/contact.png'
 }
 export const BannerInfo ={
