@@ -1,7 +1,15 @@
+import React, {useState} from 'react'
 import logo from '../logo.png'
+import {GoThreeBars} from 'react-icons/go';
 import {BrowserRouter as Router} from 'react-router-dom'
 
-const Navbar = () => {
+const MobileNav = () => {
+
+  const [click, setClick] = useState(false);
+  
+  const onClick = () => {
+        setClick(!click)
+  }
   
   return (
     <>
@@ -11,30 +19,31 @@ const Navbar = () => {
                 <img src={logo} alt='logo'className='logo'/>
                 </a>
 
-          <ul> 
+          <ul style={{transform:click ? "translateX(0)": "translateX(500px)"}}> 
                
-                <a href='#home'className='nav-links' >
+                <a href='#home'className='nav-links' onClick={onClick}>
                 <li >
                 Home 
                 </li> </a>
 
-                <a href='#about' className='nav-links'>
+                <a href='#about' className='nav-links' onClick={onClick}>
                 <li > 
                 About 
                 </li>  </a>
 
-                <a href='#projects' className='nav-links'>
+                <a href='#projects' className='nav-links' onClick={onClick}>
                 <li > 
                 Projects 
                 </li> </a>
 
-                <a href='#contact' className='nav-links'> 
+                <a href='#contact' className='nav-links' onClick={onClick}> 
                 <li > 
                 Contact 
                 </li> </a>   
                    
           </ul>
 
+            <GoThreeBars className='menu-icon' onClick={onClick}/>
         </nav> 
 
         </Router>
@@ -43,4 +52,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default MobileNav
