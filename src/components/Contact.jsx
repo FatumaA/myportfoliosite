@@ -6,7 +6,7 @@ import {ContactInfo} from './Data'
 const Contact = () => {
 
   const {register, errors}=useForm({
-    mode: 'onBlur',
+    mode: 'onSubmit',
 })
 
 // const onSubmit =(e) =>{
