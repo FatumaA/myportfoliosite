@@ -47,7 +47,8 @@ const Contact = () => {
                   type='text' 
                   name='name'
                   // onChange={handleChange}
-                  // placeholder ='Name...'
+                  placeholder ='Name...'
+                  required
                   // ref={register({ required: true })}
                />
                {/* <div>
