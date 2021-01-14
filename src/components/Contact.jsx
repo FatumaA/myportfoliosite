@@ -9,7 +9,7 @@ const Contact = () => {
     mode: 'onSubmit',
 })
 
-const onSubmit =(state, e) =>{
+const onSubmit =(state) =>{
   fetch("/contact", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -18,7 +18,7 @@ const onSubmit =(state, e) =>{
     .then(() => alert("Success!"))
     .catch(error => alert(error));
 
-  e.preventDefault();
+  // e.preventDefault();
   // action='/contact' method='POST'
 }
   return (
