@@ -12,6 +12,7 @@ const Contact = () => {
 const onSubmit =(data,e) =>{
   fetch("/", {
     method: "POST",
+    action: '/contact',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: encodeURI({ "form-name": "contact", ...data })
   })
