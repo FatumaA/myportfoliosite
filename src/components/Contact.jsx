@@ -9,8 +9,17 @@ const Contact = () => {
     mode: 'onSubmit',
 })
 
-const onSubmit =() =>{
-  
+const onSubmit =(data,e) =>{
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({ "form-name": "contact", ...data })
+  })
+    .then(() => alert("Success!"))
+    .catch(error => alert(error));
+
+  e.preventDefault();
+  // action='/contact' method='POST'
 }
   return (
     <div id='contact'>
@@ -26,7 +35,9 @@ const onSubmit =() =>{
       <div className='hero-wrapper-text'>
         <p>{ContactInfo.subHeadLine}</p>
 
-        <form name='contact' action='/contact' method='POST' onSubmit={handleSubmit(onSubmit)}>
+        <form name='contact' 
+        // action='/contact' method='POST' 
+        onSubmit={handleSubmit(onSubmit)}>
         <input type='hidden' name='form-name' value='contact'/>
         <label htmlFor='Name'>Name:</label>
         <input 
