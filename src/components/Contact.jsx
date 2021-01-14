@@ -9,12 +9,11 @@ const Contact = () => {
     mode: 'onSubmit',
 })
 
-const onSubmit =(data,e) =>{
-  fetch("/", {
+const onSubmit =(state, e) =>{
+  fetch("/contact", {
     method: "POST",
-    action: '/contact',
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encodeURI({ "form-name": "contact", ...data })
+    body: encodeURI({ "form-name": "contact", ...state })
   })
     .then(() => alert("Success!"))
     .catch(error => alert(error));
