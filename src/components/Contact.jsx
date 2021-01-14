@@ -26,7 +26,7 @@ const Contact = () => {
       <div className='hero-wrapper-text'>
         <p>{ContactInfo.subHeadLine}</p>
 
-        <form name='contact' action='/contact' method='POST' onSubmit={handleSubmit(onSubmit)}>
+        <form name='contact' action='/contact' method='POST' onSubmit>
         <input type='hidden' name='form-name' value='contact'/>
         <label htmlFor='Name'>Name:</label>
         <input 
