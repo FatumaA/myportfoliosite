@@ -9,9 +9,9 @@ const Contact = () => {
     mode: 'onSubmit',
 })
 
-const onSubmit =(e) =>{
-  e.preventDefault()
-}
+// const onSubmit =(e) =>{
+//   e.preventDefault()
+// }
   return (
     <div id='contact'>
       <h5>{ContactInfo.tagLine}</h5>
