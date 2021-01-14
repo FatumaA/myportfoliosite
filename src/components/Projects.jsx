@@ -20,7 +20,7 @@ const Projects = () => {
         </div>
         
         <div className='card'>
-        <a href='https://musing-wright-cdbbe2.netlify.app/' alt='screenshot' target='_blank' rel='noreferrer'>
+        <a href='https://www.shedevelops.dev/' alt='screenshot' target='_blank' rel='noreferrer'>
           <img src={ScreenshotsInfo.folio} alt='screenshot'/>
           </a>
           <p>{ProjectsInfo.DescPortfolio}</p>
