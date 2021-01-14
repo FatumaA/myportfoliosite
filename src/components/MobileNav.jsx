@@ -19,7 +19,7 @@ const MobileNav = () => {
                 <img src={logo} alt='logo'className='logo'/>
                 </a>
 
-          <ul style={{transform:click ? "translateX(0)": "translateX(500px)"}}> 
+          <ul style={{transform:click ? "translateX(0)" :  "translateX(500px)"}}> 
                
                 <a href='#home'className='nav-links' onClick={onClick}>
                 <li >

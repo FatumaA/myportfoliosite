@@ -5,14 +5,13 @@ import {ContactInfo} from './Data'
 
 const Contact = () => {
 
-  const {register, errors}=useForm({
+  const {register, errors, handleSubmit}=useForm({
     mode: 'onSubmit',
 })
 
-// const onSubmit =(e) =>{
-//   e.preventDefault()
-//   reset()
-// }
+const onSubmit =(e) =>{
+  e.preventDefault()
+}
   return (
     <div id='contact'>
       <h5>{ContactInfo.tagLine}</h5>
@@ -27,7 +26,7 @@ const Contact = () => {
       <div className='hero-wrapper-text'>
         <p>{ContactInfo.subHeadLine}</p>
 
-        <form name='contact' action='/contact' method='POST' >
+        <form name='contact' action='/contact' method='POST' onSubmit={handleSubmit(onSubmit)}>
         <input type='hidden' name='form-name' value='contact'/>
         <label htmlFor='Name'>Name:</label>
         <input 
