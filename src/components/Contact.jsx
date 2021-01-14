@@ -9,17 +9,17 @@ const Contact = () => {
     mode: 'onSubmit',
 })
 
-const onSubmit =(state) =>{
-  fetch("/contact", {
+const onSubmit =(data) =>{
+  fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encodeURI({ "form-name": "contact", ...state })
+    body: data
   })
-    .then(() => alert("Success!"))
+    .then('/contact')
     .catch(error => alert(error));
 
   // e.preventDefault();
-  // action='/contact' method='POST'
+  
 }
   return (
     <div id='contact'>
@@ -36,7 +36,7 @@ const onSubmit =(state) =>{
         <p>{ContactInfo.subHeadLine}</p>
 
         <form name='contact' 
-        // action='/contact' method='POST' 
+        action='/contact' method='POST' 
         onSubmit={handleSubmit(onSubmit)}>
         <input type='hidden' name='form-name' value='contact'/>
         <label htmlFor='Name'>Name:</label>
