@@ -61,6 +61,7 @@ const Contact = () => {
                    name='email' 
                   //  onChange={handleChange}
                    placeholder='Email...' 
+                   required
                   //  ref={register({
                   //  required: 'Required',
                   //  pattern:{
@@ -75,6 +76,7 @@ const Contact = () => {
                <br/>
       <label htmlFor='Message'>Message:</label>
       <textarea  rows='20' name='message' 
+      required
       // onChange={handleChange} 
       // ref={register({
       //              required: true
