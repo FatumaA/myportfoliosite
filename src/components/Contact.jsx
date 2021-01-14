@@ -9,9 +9,9 @@ const Contact = () => {
     mode: 'onSubmit',
 })
 
-// const onSubmit =(e) =>{
-//   e.preventDefault()
-// }
+const onSubmit =() =>{
+  
+}
   return (
     <div id='contact'>
       <h5>{ContactInfo.tagLine}</h5>
@@ -26,7 +26,7 @@ const Contact = () => {
       <div className='hero-wrapper-text'>
         <p>{ContactInfo.subHeadLine}</p>
 
-        <form name='contact' action='/contact' method='POST' onSubmit={handleSubmit}>
+        <form name='contact' action='/contact' method='POST' onSubmit={handleSubmit(onSubmit)}>
         <input type='hidden' name='form-name' value='contact'/>
         <label htmlFor='Name'>Name:</label>
         <input 
