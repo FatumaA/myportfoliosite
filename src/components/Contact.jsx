@@ -9,18 +9,22 @@ const Contact = () => {
     mode: 'onSubmit',
 })
 
-const onSubmit =(data) =>{
+const[state, setState] = React.useState({})
+const handleChange = (e) => setState ({ ...state, [e.target.name]: e.target.value })
+const onSubmit =(data, e) =>{
+  e.preventDefault()
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: data
+    body: encodeURI({
+      'form-name': 'contact',
+      ...state
+    })
   })
-    .then('/contact')
-    .catch(error => alert(error));
-
-  // e.preventDefault();
-  
+    .then(()=> '/contact')
+    .catch(error => alert(error)); 
 }
+
   return (
     <div id='contact'>
       <h5>{ContactInfo.tagLine}</h5>
@@ -43,6 +47,7 @@ const onSubmit =(data) =>{
         <input 
                   type='text' 
                   name='name'
+                  onChange={handleChange}
                   placeholder ='Name...'
                   ref={register({ required: true })}
                />
@@ -54,6 +59,7 @@ const onSubmit =(data) =>{
         <input 
                    type='email' 
                    name='email' 
+                   onChange={handleChange}
                    placeholder='Email...' 
                    ref={register({
                    required: 'Required',
@@ -68,7 +74,8 @@ const onSubmit =(data) =>{
                </div>
                <br/>
       <label htmlFor='Message'>Message:</label>
-      <textarea  rows='20' name='message'  
+      <textarea  rows='20' name='message' 
+      onChange={handleChange} 
       ref={register({
                    required: true
                })}
