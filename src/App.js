@@ -25,6 +25,8 @@ function App() {
   
   return (
     <>
+    {/* <Navbar className={width <= breakpoint ? 'nav-MobBackground' : 'nav-background'}/> */}
+    {/* <Navbar/> */}
     {width <= breakpoint ? <MobileNav/> : <Navbar/>}
     <Hero />
     <Banner/>

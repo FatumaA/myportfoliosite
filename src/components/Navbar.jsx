@@ -12,18 +12,17 @@ const Navbar = () => {
                 </a>
 
           <ul> 
-               
                 <a href='#home'className='nav-links' >
                 <li >
                 Home 
                 </li> </a>
 
-                <a href='#about' className='nav-links'>
+                <a href='#about' className='nav-links' >
                 <li > 
                 About 
                 </li>  </a>
 
-                <a href='#projects' className='nav-links'>
+                <a href='#projects' className='nav-links' >
                 <li > 
                 Projects 
                 </li> </a>
@@ -34,7 +33,7 @@ const Navbar = () => {
                 </li> </a>   
                    
           </ul>
-
+           
         </nav> 
 
         </Router>

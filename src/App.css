@@ -27,24 +27,24 @@ body{
     margin-bottom: 30px;
     z-index: 1;
     position: sticky;
-    top:0;
-    }
-    .logo{
+    top:0; }
+   
+       .logo{
       margin-top: 20px;
       margin-bottom: 30px;
       text-decoration: none;
       list-style-type: none;
       width: 100px;
       height: auto;
-      } 
-            
-  ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    list-style-type: none;
-            }
-           a{
+      }   
+      ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style-type: none;
+                }
+
+                  a{
              text-decoration: none;
            }
             .nav-links{
@@ -71,6 +71,7 @@ body{
             .menu-icon:hover{
               color:var(--accent-color);
             }
+
 
 .hero-main-container{
   margin-top: 20px;
@@ -150,10 +151,15 @@ form{
   max-width: 100px;
   max-height: 100px;
 }
+label{
+  margin-bottom: 3px;
+}
 input {
   padding: 10px;
   width: 100%;
+  margin-bottom: 12px;
 }
+
 textarea{
   width:100%;
 }
@@ -198,7 +204,21 @@ textarea{
       cursor: pointer;
       z-index:4;
     }
-    .nav-background{
+    .menu-icon-close{
+      size: 48px;
+      color: var(--primary-color);
+      display: block; 
+      position: absolute;
+      float: right;
+      right: 10px;
+      cursor: pointer;
+      z-index:4;
+    }
+    .menu-icon-close:hover{
+      color:var(--accent-color);
+    }
+
+     .nav-background{
       margin-top: 20px;
       margin-bottom: 0;
       height: 10vh;
@@ -208,25 +228,24 @@ textarea{
     ul{
       display: block;
       /* transform: translateX(500px);  */
+      opacity: 0;
       height: 90vh;
       width:70vh;
       z-index:3;
-    }
+    } 
    
     .nav-links{
       z-index: 2;
       position: relative;
       display: block;
       padding: 30px;
-      right: -110px;
-      top:300px;
+      top:280px;
       height: 20vh;
-
-      background-color: #fff;
+      background-color: rgb(255, 249, 255);
       color: var(--primary-color);
       border-bottom: 1px solid var(--accent-color);
-    }
-   
+    } 
+    
     
     .hero-section{
       margin-top: 20px;

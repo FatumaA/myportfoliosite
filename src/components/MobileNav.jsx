@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import logo from '../logo.png'
-import {GoThreeBars} from 'react-icons/go';
+import {GoThreeBars, GoX} from 'react-icons/go';
+
 import {BrowserRouter as Router} from 'react-router-dom'
 
 const MobileNav = () => {
@@ -9,6 +10,7 @@ const MobileNav = () => {
   
   const onClick = () => {
         setClick(!click)
+        
   }
   
   return (
@@ -19,7 +21,7 @@ const MobileNav = () => {
                 <img src={logo} alt='logo'className='logo'/>
                 </a>
 
-          <ul style={{transform:click ? "translateX(0)" :  "translateX(500px)"}}> 
+          <ul style={{opacity:click ? "1" :  "0"}}> 
                
                 <a href='#home'className='nav-links' onClick={onClick}>
                 <li >
@@ -43,7 +45,8 @@ const MobileNav = () => {
                    
           </ul>
 
-            <GoThreeBars className='menu-icon' onClick={onClick}/>
+            <GoThreeBars className='menu-icon' style={{opacity:click ? "0" :  "1"}} onClick={onClick}/>
+            <GoX className='menu-icon-close'  style={{opacity:click ? "1" :  "0"}} onClick={onClick} />
         </nav> 
 
         </Router>
